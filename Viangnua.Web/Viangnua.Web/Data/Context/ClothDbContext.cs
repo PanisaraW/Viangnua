@@ -11,6 +11,7 @@ namespace Viangnua.Web.Data.Context;
 /// </summary>
 public class ClothDbContext : DbContext
 {
+    //DbSet is used to query and manipulate the data inside the table
     public DbSet<Cloth> Cloth { get; set; }
     public DbSet<FabricPiece> FabricPiece { get; set; }
     public DbSet<Belt> Belt { get; set; }
@@ -24,8 +25,9 @@ public class ClothDbContext : DbContext
     public ClothDbContext(DbContextOptions<ClothDbContext> options) : base(options)
     {
     }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    
+    //configure the database scheme and model relationships
+    protected override void OnModelCreating(ModelBuilder modelBuilder) 
     {
         modelBuilder.Entity<Cloth>()
             .ToTable(nameof(Cloth));
