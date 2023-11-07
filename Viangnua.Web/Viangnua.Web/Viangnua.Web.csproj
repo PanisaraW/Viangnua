@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
+      <UserSecretsId>30a0c81f-62dd-4d91-8e33-56ef420d576e</UserSecretsId>
+  </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />

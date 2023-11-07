@@ -17,6 +17,10 @@ builder.Services.AddCors(options =>
     });
 });
 
+// instead of using appsetting.json, we are using user secret to store our sensitive data
+// https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-7.0&tabs=linux
+var config = builder.Configuration.GetConnectionString("Development");
+
 var app = builder.Build(); //building the web application using the settings
 
 // Configure the HTTP request pipeline.
