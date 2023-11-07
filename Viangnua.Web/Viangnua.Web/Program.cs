@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Viangnua.Web.Data.Context;
+
 var builder = WebApplication.CreateBuilder(args); //build the web application. args is the parameter that contains the arguments which are added to the application
 
 // Add services to the container.
@@ -20,6 +23,9 @@ builder.Services.AddCors(options =>
 // instead of using appsetting.json, we are using user secret to store our sensitive data
 // https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-7.0&tabs=linux
 var config = builder.Configuration.GetConnectionString("Development");
+
+builder.Services.AddDbContext<ClothDbContext>(options => options.UseSqlServer(config));
+// config builder.Services.AddDbContext<ClothDbContext> // for NoSQL Database
 
 var app = builder.Build(); //building the web application using the settings
 
