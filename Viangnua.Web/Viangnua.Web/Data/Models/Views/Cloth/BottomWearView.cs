@@ -1,4 +1,4 @@
-namespace Viangnua.Web.Data.Models.ClothView;
+namespace Viangnua.Web.Data.Models.Views.Cloth;
 
 public class BottomWearView : ClothView
 {

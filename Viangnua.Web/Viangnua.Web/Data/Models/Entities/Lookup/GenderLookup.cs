@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Viangnua.Web.Data.Models.Lookup;
+namespace Viangnua.Web.Data.Models.Entities.Lookup;
 
 public class GenderLookup
 {

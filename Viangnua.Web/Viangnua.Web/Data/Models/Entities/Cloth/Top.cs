@@ -1,4 +1,4 @@
-namespace Viangnua.Web.Data.Models.Cloth;
+namespace Viangnua.Web.Data.Models.Entities.Cloth;
 
 public class Top : Cloth
 {

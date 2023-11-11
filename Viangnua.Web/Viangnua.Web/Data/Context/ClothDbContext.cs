@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Viangnua.Web.Data.Models.Cloth;
-using Viangnua.Web.Data.Models.Enum;
-using Viangnua.Web.Data.Models.Lookup;
+using Viangnua.Web.Data.Models.Entities.Cloth;
+using Viangnua.Web.Data.Models.Entities.Enum;
+using Viangnua.Web.Data.Models.Entities.Lookup;
 using Viangnua.Web.Extension;
 
 namespace Viangnua.Web.Data.Context;

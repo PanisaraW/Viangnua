@@ -1,4 +1,4 @@
-using Viangnua.Web.Data.Models.Enum;
+using Viangnua.Web.Data.Models.Entities.Enum;
 
 namespace Viangnua.Web.Extension;
 

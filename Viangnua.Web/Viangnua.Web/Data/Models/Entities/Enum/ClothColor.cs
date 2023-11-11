@@ -1,4 +1,4 @@
-namespace Viangnua.Web.Data.Models.Enum;
+namespace Viangnua.Web.Data.Models.Entities.Enum;
 
 public enum ClothColor
 {
