@@ -1,0 +1,27 @@
+#app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  background-color: #F0F1F3;
+
+  .sidebar {
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    font-size: 10em;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+
+
+
+
+
+
+
+

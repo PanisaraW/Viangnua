@@ -1,0 +1,44 @@
+.toolbar {
+  display: flex;
+  height: 80px;
+  align-items: center; // set items to center
+  justify-content: space-between;
+  .search-box {
+    flex: 350px;
+    padding: 4px;
+    background-color: white;
+    .search-icon {
+      cursor: pointer;
+
+      i {
+        font-size: 25px; /* Increased the font size */
+        padding: 10px;
+        margin-top: 8px;
+      }
+    }
+
+    input[type="text"] {
+      background-color: transparent;
+      border-style: none;
+      padding-left: 10px; /* Adjusted padding for the magnifying glass icon */
+      font-size: 30px; /* Increased the font size for the input */
+      /* Add any other styles for your input box here */
+    }
+  }
+
+  .space-between{
+    flex-grow: 1;
+  }
+
+  .icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center; /* Align icons vertically in the center */
+    justify-content: flex-end; /* Align icons to the right */
+
+    button {
+      margin-left: 10px; /* Add some spacing between icons */
+    }
+  }
+}
+

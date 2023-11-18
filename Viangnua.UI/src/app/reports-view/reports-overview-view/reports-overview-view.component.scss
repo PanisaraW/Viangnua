@@ -1,0 +1,18 @@
+mat-grid-list {
+  background: white;
+  width: 700px;
+  //padding-bottom: 0!important;
+}
+
+mat-grid-tile {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    //padding: 8px; /* Add padding to create space between tiles */
+  }
+}

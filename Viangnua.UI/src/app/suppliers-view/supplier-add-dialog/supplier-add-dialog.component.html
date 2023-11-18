@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>New Supplier</h2>
+<mat-dialog-content>
+  <!-- Form for name, category, buying price, quantity -->
+  <form [formGroup]="productForm">
+    <!-- Product Name -->
+    <mat-form-field class="full-width">
+      <input matInput formControlName="productName" placeholder="Product Name" />
+    </mat-form-field>
+
+    <!-- Product Category -->
+    <mat-form-field class="full-width">
+      <input matInput formControlName="productCategory" placeholder="Product Category" />
+    </mat-form-field>
+
+    <!-- Buying Price -->
+    <mat-form-field class="full-width">
+      <input matInput formControlName="buyingPrice" type="number" placeholder="Buying Price" />
+    </mat-form-field>
+
+    <!-- Quantity -->
+    <mat-form-field class="full-width">
+      <input matInput formControlName="quantity" type="number" placeholder="Quantity" />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()">Save</button>
+</mat-dialog-actions>
+

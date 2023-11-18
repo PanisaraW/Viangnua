@@ -1,0 +1,60 @@
+.inventory-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.overall-inventory,
+.product-details {
+  width: 100%;
+  padding: 2px;
+  background-color: #f0f1f3;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      border: 1px solid black;
+    }
+
+    /* Style for the headers */
+    th {
+      background-color: white;
+    }
+  }
+
+  .scrollable-table tbody {
+    /* Add 10 empty rows to the table */
+    @for $i from 1 through 10 {
+      tr:nth-child(#{$i}) {
+        td {
+          height: 20px; /* Adjust the height as needed */
+          /* Add any styling for empty cells if needed */
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 10px;
+
+    button {
+      padding: 8px;
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: #f0f1f3;
+      color: #f0f1f3;
+      border: none;
+      border-radius: 4px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

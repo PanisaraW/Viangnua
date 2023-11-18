@@ -1,0 +1,68 @@
+mat-grid-list {
+  //background: white;
+  width: 500px;
+  //padding-bottom: 0!important;
+}
+
+mat-grid-tile {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    //padding: 8px; /* Add padding to create space between tiles */
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 6px;
+    }
+
+    .icon-container-purchase {
+      background-color: #E5F6FD;
+      i {
+        color: #009ED8;
+      }
+    }
+
+    .icon-container-cost {
+      background-color: #EBFFED;
+      i {
+        color: #58D365;
+      }
+    }
+
+    .details {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .currency {
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      .title {
+
+      }
+    }
+  }
+}
+
+mat-grid-tile:not(:last-child) {
+  margin-right: 8px; /* Add margin to create the appearance of a right border */
+  border-right: 2px solid #F0F1F3;
+}
+
+h1 {
+  font-size: 28px;
+  color: black;
+}
+
