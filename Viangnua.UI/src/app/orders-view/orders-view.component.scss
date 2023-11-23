@@ -1,19 +1,20 @@
 .order-content {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px;
   background-color: #F0F1F3;
   color: #333;
-  font-size: 18px; /* Adjust this value as needed */
+  font-size: 12px; /* Adjust this value as needed */
 
   * {
+    width: 100%;
     margin: 10px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em; /* Adjust this value as needed */
+    //font-size: 1.2em; /* Adjust this value as needed */
   }
 }
 

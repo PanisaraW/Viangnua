@@ -1,12 +1,18 @@
-<mat-list>
-  <div mat-subheader>Low Quantity Stock</div>
+<h2>Low Quantity Stock</h2>
+<mat-list class="low-stock-header">
+  <mat-list-item>
+    <div matListItemTitle><strong>Name</strong></div>
+    <div matListItemLine><strong>Amount Left</strong></div>
+    <div><strong>Photo</strong></div>
+  </mat-list-item>
+</mat-list>
+
+  <mat-list class="low-stock-detail">
   @for (item of lowQuantityStockItems;track item) {
-    <mat-list-item>
-      <div matListItemTitle>{{ item.name }}</div>
-      <div matListItemLine>{{ item.amountLeft }}</div>
-      <div>
-        <img src="{{item.photo}}">
-      </div>
-    </mat-list-item>
+    <div matListItemTitle>{{ item.name }}</div>
+    <div matListItemLine>{{ item.amountLeft }}</div>
+    <div>
+      <img src="{{item.photo}}">
+    </div>
   }
 </mat-list>

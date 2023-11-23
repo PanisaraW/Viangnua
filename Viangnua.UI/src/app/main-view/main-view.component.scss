@@ -1,18 +1,19 @@
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: #F0F1F3;
-  color: #333;
-  font-size: 18px; /* Adjust this value as needed */
+.view-content {
+    app-main-top-selling-stock-view {
+    }
 
-  * {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em; /* Adjust this value as needed */
-  }
+    app-main-low-quantity-stock-view {
+    }
+
+    app-main-hello-view{
+    }
+
+    app-main-reminder-view{
+    }
+
+    app-main-order-summary-view {
+    }
+
+    app-graph-overview {
+    }
 }

@@ -1,35 +1,63 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {MatTableModule} from '@angular/material/table';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NgxEchartsDirective} from "ngx-echarts";
+import * as echarts from 'echarts';
+import {fontsize} from "angular-material";
 
 @Component({
   selector: 'app-main-top-selling-stock-view',
   standalone: true,
-  imports: [CommonModule, MatTableModule],
+  imports: [CommonModule, NgxEchartsDirective],
   templateUrl: './main-top-selling-stock-view.component.html',
   styleUrl: './main-top-selling-stock-view.component.scss'
 })
-export class MainTopSellingStockViewComponent {
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+export class TopSellingStockViewComponent {
+  chartOption: echarts.EChartsOption = {
+    tooltip: {
+      trigger: 'item'
+    },
+    legend: {
+      orient: 'vertical', // Change orientation to vertical
+      left: '5%', // Adjust left margin
+      top: 'center', // Center vertically
+      textStyle: {
+        fontSize: 20, // Set the font size for the legend
+      },
+    },
+    series: [
+      {
+        type: 'pie',
+        name: 'Access From',
+        radius: ['40%', '70%'],
+        center: ['60%', '50%'], // Adjust center to move the chart to the left
+        itemStyle: {
+          borderRadius: 10,
+          borderColor: '#fff',
+          borderWidth: 2
+        },
+        label: {
+          show: false,
+          position: 'center',
+          fontSize: 20,
+        },
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: 40,
+            fontWeight: 'bold'
+          }
+        },
+        labelLine: {
+          show: false
+        },
+        data: [
+          {value: 1048, name: 'Elephant Pants'},
+          {value: 735, name: 'Cat Shirt'},
+          {value: 580, name: 'Bunny Pants'},
+          {value: 484, name: 'Scarf'},
+          {value: 300, name: 'Belt'}
+        ]
+      }
+    ]
+  };
 }
-
-  export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
