@@ -1,50 +1,56 @@
-<div class="component">
-  <div class="header-content">
-    <div class="details">
-      <div class="profile-picture">
-        <img alt="profile-picture" src="assets/profile.jpg">
+<mat-sidenav-container class="sidebar-container" >
+  <mat-sidenav #sidenav mode="side" [opened]="opened">
+    <div class="component">
+      <div class="header-content">
+        <div class="details">
+          <div class="profile-picture">
+            <img alt="profile-picture" src="assets/profile.jpg">
+          </div>
+          <div class="notification">
+            <mat-icon class="notification">notifications</mat-icon>
+            <mat-icon class="userAccount">account_circle</mat-icon>
+          </div>
+
+        </div>
+        <div class="user">
+          <img alt="test" src="assets/logo.jpg">
+        </div>
+        <div class="user-title">
+          Bun Bunny
+        </div>
+        <div class="user-email">
+          BunBun&#64;gmail.com
+        </div>
       </div>
-      <div class="notification">
-        <mat-icon class="notification">notifications</mat-icon>
-        <mat-icon class="userAccount">account_circle</mat-icon>
+      <div class="sidebar-detail">
+        <div class="sidebar-menu">
+          <!-- Modify the button element to bind the class dynamically -->
+          <button routerLink="/overview" [class.active]="isActive('/overview')">
+            <mat-icon class="overview">dashboard</mat-icon>
+            Overview
+          </button>
+
+          <!-- Repeat the same for other buttons -->
+          <button routerLink="/stock" [class.active]="isActive('/stock')">
+            <mat-icon class="stock">inventory_2</mat-icon>
+            Stock
+          </button>
+
+          <button routerLink="/orders" [class.active]="isActive('/orders')">
+            <mat-icon class="orders-icon">book</mat-icon>
+            Orders
+          </button>
+
+          <button routerLink="/suppliers" [class.active]="isActive('/suppliers')">
+            <mat-icon class="suppliers">groups</mat-icon>
+            Suppliers
+          </button>
+        </div>
       </div>
-
     </div>
-    <div class="user">
-      <img alt="test" src="assets/logo.jpg">
-    </div>
-    <div class="user-title">
-      Bun Bunny
-    </div>
-    <div class="user-email">
-      BunBun&#64;gmail.com
-    </div>
-  </div>
-</div>
+  </mat-sidenav>
 
-<div class="sidebar-detail">
-  <div class="sidebar-menu">
-    <!-- Modify the button element to bind the class dynamically -->
-    <button routerLink="/overview" [class.active]="isActive('/overview')">
-      <mat-icon class="overview">dashboard</mat-icon>
-      Overview
-    </button>
+</mat-sidenav-container>
 
-    <!-- Repeat the same for other buttons -->
-    <button routerLink="/stock" [class.active]="isActive('/stock')">
-      <mat-icon class="stock">inventory_2</mat-icon>
-      Stock
-    </button>
 
-    <button routerLink="/orders" [class.active]="isActive('/orders')">
-      <mat-icon class="orders-icon">book</mat-icon>
-      Orders
-    </button>
-
-    <button routerLink="/suppliers" [class.active]="isActive('/suppliers')">
-      <mat-icon class="suppliers">groups</mat-icon>
-      Suppliers
-    </button>
-  </div>
-</div>
 

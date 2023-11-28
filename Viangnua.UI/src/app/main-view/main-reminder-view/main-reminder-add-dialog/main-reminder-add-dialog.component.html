@@ -1,0 +1,22 @@
+<div>
+  <form [formGroup]="reminderForm">
+    <div class="input-details">
+      <mat-form-field class="dateTime-input">
+        <mat-label>Input disabled</mat-label>
+        <input matInput [matDatepicker]="dp3" disabled>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3 [disabled]=false></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="reminder-input">
+        <mat-label>Daily Reminder</mat-label>
+        <textarea matInput placeholder="To-do..."></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="button-content">
+      <button mat-raised-button>Add</button>
+      <button mat-raised-button>Cancel</button>
+    </div>
+  </form>
+</div>

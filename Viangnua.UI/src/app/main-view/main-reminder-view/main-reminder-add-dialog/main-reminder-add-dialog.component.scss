@@ -1,0 +1,22 @@
+.button{
+  flex-direction: column;
+  padding: 20px;
+}
+
+.input-details{
+  display: flex;
+  flex-direction: column;
+  .reminder-input{
+    flex-direction: column;
+    padding: 20px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .dateTime-input{
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+

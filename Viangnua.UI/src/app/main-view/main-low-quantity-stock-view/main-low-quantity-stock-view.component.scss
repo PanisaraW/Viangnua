@@ -1,14 +1,10 @@
-.low-stock-header {
-  width: 700px;
-  height: 500px;
+.low-stock-header{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #F0F1F3;
+  color: #333;
+  font-size: 12px; /* Adjust this value as needed */
 }
-
-h2{
-  font-size: 17px;
-  font-weight: normal;
-  padding: 1px;
-}
-
 

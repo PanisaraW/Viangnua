@@ -1,23 +1,116 @@
-#app {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100vw;
-  font-family: sans-serif;
-  background-color: #F0F1F3;
+.sidebar-container {
+  height:100vh;
 
-  .sidebar {
-    height: 100vh;
-    width: 300px;
-    flex-shrink: 0;
+  .side-nav-component {
+    height:100%;
+    width:300px;
     background-color: #555555;
-    font-size: 1em;
+
+    .header-content{
+      background-color: #555555;
+      .details{
+        padding: 16px;
+        height: 25px;
+        display: flex;
+        justify-content: space-between; /* To move the profile picture to the left */
+        align-items: center; /* Center items vertically */
+        .profile-picture {
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          overflow: hidden; /* Ensure the image is within the rounded container */
+          img {
+            width: 25px; /* Set the desired width */
+            height: 25px; /* Set the desired height */
+            border-radius: 50%;
+            overflow: hidden; /* Ensure the image is within the rounded container */
+          }
+        }
+      }
+      .user-img {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+          margin: 0 auto; /* Center the image horizontally */
+        }
+      }
+      .user-title,
+      .user-email {
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: white;
+        text-align: center; /* Center the text horizontally */
+      }
+
+      .user-title {
+        margin-top: 24px;
+      }
+
+      .user-email {
+        margin-top: 2px;
+      }
+    }
+
+    .sidebar-detail{
+      .sidebar-menu{
+        margin-top: 35px;
+        padding: 10px 16px;
+        display: flex;
+        align-items: flex-start;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 70px;
+        flex-direction: column;
+
+        button {
+          display: flex;
+          align-items: center;
+          margin-bottom: 17px;
+          border: none;
+          font-size: 14px;
+          padding: 13px;
+          width: 100%;
+          color: white;
+          border-radius: 10px;
+          transition: background-color 0.3s, color 0.3s;
+          background-color: #333;
+        }
+
+        button:hover {
+          background-color: rgba(197, 212, 238, 0.3); /* Change the background color on hover */
+        }
+
+        button.active {
+          background-color: rgba(6, 68, 175, 0.3); /* Change the background color on hover */
+        }
+      }
+    }
   }
 
-  .content {
-    width: 100%;
+  .side-nav-view-content {
+    app-toolbar {
+
+    }
+  }
+
+  .mat-icon{
+    color: white;
+    padding: 5px;
   }
 }
+
+
+
+
+
+
 
 
 

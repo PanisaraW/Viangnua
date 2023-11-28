@@ -1,16 +1,3 @@
-<div class="demo-button-container">
-  <button mat-raised-button (click)="addData()" class="demo-button">
-    Add data
-  </button>
-  <button
-    mat-raised-button
-    [disabled]="!dataToDisplay.length"
-    (click)="removeData()"
-    class="demo-button">
-    Remove data
-  </button>
-</div>
-
 <table mat-table [dataSource]="dataSource" multiTemplateDataRows="true" class="mat-elevation-z8">
   <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
     <th mat-header-cell *matHeaderCellDef> {{column}} </th>
@@ -44,3 +31,16 @@
   </tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
+
+<div class="add-cancel-button">
+  <button mat-raised-button (click)="addData()" class="demo-button">
+    Add data
+  </button>
+  <button
+    mat-raised-button
+    [disabled]="!dataToDisplay.length"
+    (click)="removeData()"
+    class="demo-button">
+    Remove data
+  </button>
+</div>

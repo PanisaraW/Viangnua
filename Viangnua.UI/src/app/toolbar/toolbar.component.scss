@@ -1,20 +1,21 @@
 .toolbar {
-  width: 100%;
+  width: 1350px;
   background-color: #555555;
   padding: 15px;
   align-items: center;
   border-left: 1.5px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .toggle-icon {
+    color: white;
+  }
+
+  .search-icon {
+    color: white;
+  }
+
 }
 
-.search-option{
-  display: flex;
-  justify-content: flex-end;
-  border: none;
-  font-size: 12px;
-  padding: 8px;
-  width: 95%;
-  color: white;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  background-color: #333;
-}
+

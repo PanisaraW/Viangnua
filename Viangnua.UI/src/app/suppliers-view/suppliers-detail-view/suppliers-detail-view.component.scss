@@ -1,5 +1,7 @@
-.demo-button-container {
-  padding-bottom: 16px;
+.add-cancel-button {
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
 
   .demo-button + .demo-button {
     margin-left: 8px;
@@ -63,4 +65,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 .example-element-description-attribution {
   opacity: 0.5;
+}
+.add-cancel-button{
+  margin-top: 20px;
 }

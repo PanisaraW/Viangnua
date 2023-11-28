@@ -7,11 +7,11 @@ import {MainHelloViewComponent} from "./main-hello-view/main-hello-view.componen
 import {MainReminderViewComponent} from "./main-reminder-view/main-reminder-view.component";
 
 @Component({
+  imports: [CommonModule, TopSellingStockViewComponent, MainLowQuantityStockViewComponent, GraphOverviewComponent, MainHelloViewComponent, MainReminderViewComponent],
   selector: 'app-main-view',
   standalone: true,
-  imports: [CommonModule, TopSellingStockViewComponent, MainLowQuantityStockViewComponent, GraphOverviewComponent, MainHelloViewComponent, MainReminderViewComponent],
-  templateUrl: './main-view.component.html',
-  styleUrls: ['../../shared-style/shared-view.scss', './main-view.component.scss']
+  styleUrls: ['../../shared-style/shared-view.scss', './main-view.component.scss'],
+  templateUrl: './main-view.component.html'
 })
 export class MainViewComponent {
 

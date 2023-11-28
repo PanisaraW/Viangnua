@@ -38,10 +38,19 @@ import {NgxEchartsModule, NGX_ECHARTS_CONFIG} from 'ngx-echarts';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Viangnua.UI';
-  isDrawerOpen: boolean = true;
+  isSidebarOpened = true;
 
-  toggleDrawer() {
-    this.isDrawerOpen = !this.isDrawerOpen;
+  toggleSidenav() {
+    this.isSidebarOpened = !this.isSidebarOpened;
+  }
+
+  isActive(s: string) {
+    if(s === "/overview"){
+      return true;
+    }
+
+    return false;
   }
 }
+
+
