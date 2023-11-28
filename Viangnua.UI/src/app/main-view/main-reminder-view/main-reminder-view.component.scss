@@ -1,12 +1,27 @@
-.demo-inline-calendar-card {
-  width: 300px;
-}
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.user {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between;
+
+  .welcome-text {
+    font-weight: bold;
+    font-size: xx-large;
+    margin-left: 15px;
+  }
+
+  .add-reminder {
+    margin-left: auto;
+
+    button {
+      background-color: coral; /* Push the "Add Reminder" button to the right */
+    }
+  }
 }
 
-.example-full-width {
-  width: 100%;
+.user img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Use 50% to create a circle, not 100% */
+  overflow: hidden;
 }
+

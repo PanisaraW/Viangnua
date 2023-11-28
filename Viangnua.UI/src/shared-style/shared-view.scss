@@ -1,18 +1,22 @@
 .view-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
   padding: 10px;
-  background-color: #F0F1F3;
+  background-color: white;
   color: #333;
   font-size: 12px;
+
 
   * {
     margin: 10px;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 1300px;
   }
 }

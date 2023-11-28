@@ -8,11 +8,12 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {MainReminderAddDialogComponent} from "./main-reminder-add-dialog/main-reminder-add-dialog.component";
+import {MatListModule} from "@angular/material/list";
 
 @Component({
   selector: 'app-main-reminder-view',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatIconModule, MatButtonModule,MatDialogModule],
+  imports: [CommonModule, MatCardModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatIconModule, MatButtonModule, MatDialogModule, MatListModule],
   templateUrl: './main-reminder-view.component.html',
   styleUrl: './main-reminder-view.component.scss',
 })
