@@ -2,5 +2,23 @@
   <button mat-icon-button (click)="toggleSidenav()">
     <mat-icon class="toggle-icon">reorder</mat-icon>
   </button>
-</div>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <div class="flag-icon-container">
+      <img src="assets/flag-icons-main/flags/1x1/us.svg" alt="" class="flag-icon">
+    </div>
+    <span class="button-text">thai </span>
+  </button>
 
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <img src="assets/flag-icons-main/flags/1x1/th.svg" alt="Image Alt Text" class="menu-icon">
+      <span class="button-text visually-hidden">Thai </span>
+    </button>
+    <button mat-menu-item>
+      <img src="assets/flag-icons-main/flags/1x1/de.svg" alt="Image Alt Text" class="menu-icon">
+      <span class="button-text visually-hidden">German </span>
+    </button>
+  </mat-menu>
+
+
+</div>

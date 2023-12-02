@@ -14,7 +14,7 @@ export class GraphOverviewComponent {
   chartOption: echarts.EChartsOption = {
     color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
     title: {
-      text: 'Gradient Stacked Area Chart'
+      text: 'Sales Overview'
     },
     tooltip: {
       trigger: 'axis',

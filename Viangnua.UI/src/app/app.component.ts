@@ -10,6 +10,7 @@ import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
 import {NgxEchartsModule, NGX_ECHARTS_CONFIG} from 'ngx-echarts';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

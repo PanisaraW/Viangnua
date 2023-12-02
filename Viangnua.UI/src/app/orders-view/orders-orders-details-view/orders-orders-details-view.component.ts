@@ -15,7 +15,7 @@ import {Observable, ReplaySubject} from "rxjs";
   styleUrl: './orders-orders-details-view.component.scss'
 })
 export class OrdersOrdersDetailsViewComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['Number', 'Name', 'Status'];
   dataToDisplay = [...ELEMENT_DATA];
   expandedElement: SupplierElement|null=null;
   dataSource = new ExampleDataSource(this.dataToDisplay);
@@ -64,23 +64,20 @@ class ExampleDataSource extends DataSource<SupplierElement> {
   }
 }
 export interface SupplierElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  Name: string;
+  Number: number;
+  Status: string;
 }
 
 const ELEMENT_DATA: SupplierElement[] = [
   {
-    position: 1,
-    name: 'Hydrogen',
-    weight: 1.0079,
-    symbol: 'H',
+    Number: 1,
+    Name: 'Mr. John Doe',
+    Status: 'Finished',
   }, {
-    position: 2,
-    name: 'Helium',
-    weight: 4.0026,
-    symbol: 'He',
+    Number: 2,
+    Name: 'Ms. Jane Doe',
+    Status: 'Ongoing',
   }
 ];
 

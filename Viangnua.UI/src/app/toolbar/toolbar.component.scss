@@ -3,10 +3,37 @@
   background-color: #555555;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   .toggle-icon {
     color: white;
   }
+
+  .flag-icon, .menu-icon{
+    margin-left: auto;
+    margin-top: 37px;
+
+  }
+
+  .button-text {
+    font-size: 12px; /* Set font size to zero to hide the text visually */
+    color: transparent; /* Set text color to transparent */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
 }
 
+.menu-icon {
+  width: 24px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Adjust the margin as needed */
+}
 

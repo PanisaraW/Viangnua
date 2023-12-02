@@ -1,30 +1,33 @@
-<h2 mat-dialog-title>New Supplier</h2>
-<mat-dialog-content>
-  <!-- Form for name, category, buying price, quantity -->
-  <form [formGroup]="productForm">
-    <!-- Product Name -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="productName" placeholder="Product Name" />
-    </mat-form-field>
+<div class="add-supplier">
 
-    <!-- Product Category -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="productCategory" placeholder="Product Category" />
-    </mat-form-field>
+  <h2 mat-dialog-title>New Supplier</h2>
+  <mat-dialog-content>
+    <!-- Form for name, category, buying price, quantity -->
+    <form [formGroup]="productForm">
 
-    <!-- Buying Price -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="buyingPrice" type="number" placeholder="Buying Price" />
-    </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput formControlName="Number" type="number" placeholder="Number"/>
+      </mat-form-field>
+      <!-- Product Name -->
+      <mat-form-field class="full-width">
+        <input matInput formControlName="Supplier Name" placeholder="Supplier Name"/>
+      </mat-form-field>
 
-    <!-- Quantity -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="quantity" type="number" placeholder="Quantity" />
-    </mat-form-field>
-  </form>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button (click)="onCancelClick()">Cancel</button>
-  <button mat-button (click)="onSaveClick()">Save</button>
-</mat-dialog-actions>
+      <!-- Product Category -->
+      <mat-form-field class="full-width">
+        <input matInput formControlName="Address" placeholder="Supplier Address"/>
+      </mat-form-field>
+
+      <!-- Buying Price -->
+      <mat-form-field class="full-width">
+        <input matInput formControlName="Phone Number" type="string" placeholder="Phone Number"/>
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button (click)="onSaveClick()">Save</button>
+  </mat-dialog-actions>
+</div>
+
 

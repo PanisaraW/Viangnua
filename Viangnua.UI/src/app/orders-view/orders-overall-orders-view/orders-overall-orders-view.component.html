@@ -1,52 +1,6 @@
 <div class="orders-overall-content">
-  <h1>Orders Overview</h1>
-  <mat-grid-list [cols]="3" rowHeight="120px">
-    <mat-grid-tile>
-      <div class="content">
-        <div class="details">
-          <div class="orderAmount">
-            832
-            <!--          make a class for the currency symbol-->
-          </div>
-          <div class="title">
-            Total Orders
-          </div>
-        </div>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="content">
-        <div class="details">
-          <div class="orderAmount">
-            832
-            <!--          make a class for the currency symbol-->
-          </div>
-          <div class="title">
-            Total Received
-          </div>
-        </div>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="content">
-        <div class="details">
-          <div class="orderAmount">
-            832
-            <!--          make a class for the currency symbol-->
-          </div>
-          <div class="title">
-            On the way
-          </div>
-        </div>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="header">
+    <h1>Weekly Orders</h1>
+  </div>
+  <div echarts [options]="chartOption" class="demo-chart"></div>
 </div>
-
-
-
-
-
-
-
-

@@ -1,30 +1,38 @@
-<h2 mat-dialog-title>New Order</h2>
-<mat-dialog-content>
-  <!-- Form for name, category, buying price, quantity -->
-  <form [formGroup]="productForm">
-    <!-- Product Name -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="productName" placeholder="Product Name" />
-    </mat-form-field>
+<div class="invoice-detail">
+  <h2 mat-dialog-title>Invoice</h2>
+  <mat-dialog-content>
+    <!-- Form for name, category, buying price, quantity -->
+    <form [formGroup]="productForm">
+      <mat-form-field class="customer-name">
+        <input matInput formControlName="customerName" placeholder="Customer Name" />
+      </mat-form-field>
 
-    <!-- Product Category -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="productCategory" placeholder="Product Category" />
-    </mat-form-field>
+      <mat-form-field class="shipping-location">
+        <input matInput formControlName="shippingLocation" placeholder="Shipping Location" />
+      </mat-form-field>
 
-    <!-- Buying Price -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="buyingPrice" type="number" placeholder="Buying Price" />
-    </mat-form-field>
+      <mat-form-field class="product-name">
+        <input matInput formControlName="productName" placeholder="Product Name" />
+      </mat-form-field>
 
-    <!-- Quantity -->
-    <mat-form-field class="full-width">
-      <input matInput formControlName="quantity" type="number" placeholder="Quantity" />
-    </mat-form-field>
-  </form>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button (click)="onCancelClick()">Cancel</button>
-  <button mat-button (click)="onSaveClick()">Save</button>
-</mat-dialog-actions>
+      <!-- Product Category -->
+      <mat-form-field class="full-width">
+        <input matInput formControlName="productCategory" placeholder="Product Category" />
+      </mat-form-field>
 
+      <!-- Buying Price -->
+      <mat-form-field class="full-width">
+        <input matInput formControlName="buyingPrice" type="number" placeholder="Buying Price" />
+      </mat-form-field>
+
+      <!-- Quantity -->
+      <mat-form-field class="full-width">
+        <input matInput formControlName="quantity" type="number" placeholder="Quantity" />
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button (click)="onSaveClick()">Save</button>
+  </mat-dialog-actions>
+</div>
