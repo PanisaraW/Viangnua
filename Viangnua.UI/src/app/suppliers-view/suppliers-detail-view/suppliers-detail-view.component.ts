@@ -15,7 +15,7 @@ import {MatTableModule} from "@angular/material/table";
   styleUrl: './suppliers-detail-view.component.scss'
 })
 export class SuppliersDetailViewComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['Name', 'Address', 'Phone Number'];
   dataToDisplay = [...ELEMENT_DATA];
   expandedElement: SupplierElement|null=null;
   dataSource = new ExampleDataSource(this.dataToDisplay);
@@ -23,9 +23,6 @@ export class SuppliersDetailViewComponent {
   constructor(private dialog: MatDialog) {}
 
   addData() {
-    // const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    // this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA[randomElementIndex]];
-    // this.dataSource.setData(this.dataToDisplay);
     const dialogRef = this.dialog.open(SupplierAddDialogComponent, {
       width: '600px', // Adjust the width as needed
     });
@@ -64,22 +61,27 @@ class ExampleDataSource extends DataSource<SupplierElement> {
   }
 }
 export interface SupplierElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  Name:string;
+  Address:string;
+  'Phone Number':string;
 }
 
 const ELEMENT_DATA: SupplierElement[] = [
   {
-    position: 1,
-    name: 'Hydrogen',
-    weight: 1.0079,
-    symbol: 'H',
+    Name: 'Jane Doe',
+    Address: '123 street, Any Town, Chiang Mai, Thailand',
+    'Phone Number':'456 123 569',
   }, {
-    position: 2,
-    name: 'Helium',
-    weight: 4.0026,
-    symbol: 'He',
+    Name:'John Doe',
+    Address: '456 street, Any Town, Thailand',
+    'Phone Number': '123 569 369',
+  }, {
+    Name:'Jack Doe',
+    Address: '7526 street, First Town, Thailand',
+    'Phone Number': '123 569 369',
+  }, {
+    Name:'Jessica Doe',
+    Address: '4789 street, Second Town, Thailand',
+    'Phone Number': '123 569 369',
   }
 ];
